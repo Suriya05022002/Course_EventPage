@@ -844,14 +844,9 @@ function updateResultsCount() {
 
 // Format date
 function formatDate(dateString) {
-  const date = new Date(dateString)
-  return date
-    .toLocaleDateString("en-US", {
-      weekday: "short",
-      day: "numeric",
-      year: "numeric",
-    })
-    .replace(/(\w+), (\d+), (\d+)/, "$1, $2, $3")
+  const date = new Date(dateString);
+  const options = { day: '2-digit', month: 'short', year: 'numeric' };
+  return date.toLocaleDateString('en-GB', options).replace(/ /g, ' ');
 }
 
 // Show course details in modal
