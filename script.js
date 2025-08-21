@@ -8,7 +8,7 @@ const coursesData = [
     format: "Online : Via ZOOM",
     instructor: {
       name: "Gowtham Raj",
-      title: "Senior Full Stack Developer",
+      title: "Founder,Chairman,CEO",
       avatar: "GR",
     },
     date: "2025-08-21",
@@ -41,7 +41,7 @@ const coursesData = [
     format: "Online : Via ZOOM",
     instructor: {
       name: "Gowtham Raj",
-      title: "Python Developer & Trainer",
+      title: "Founder,Chairman,CEO",
       avatar: "GR",
     },
     date: "2025-08-22",
@@ -74,7 +74,7 @@ const coursesData = [
     format: "Online : Via ZOOM",
     instructor: {
       name: "Gowtham Raj",
-      title: "Data Science Lead",
+      title: "Founder,Chairman,CEO",
       avatar: "GR",
     },
     date: "2025-08-23",
@@ -107,7 +107,7 @@ const coursesData = [
     format: "Online : Via ZOOM",
     instructor: {
       name: "Gowtham Raj",
-      title: "Senior Full Stack Developer",
+      title: "Founder,Chairman,CEO",
       avatar: "GR",
     },
     date: "2025-08-24",
@@ -140,7 +140,7 @@ const coursesData = [
     format: "Online : Via ZOOM",
     instructor: {
       name: "Gowtham Raj",
-      title: "Python Developer & Trainer",
+      title: "Founder,Chairman,CEO",
       avatar: "GR",
     },
     date: "2025-08-25",
@@ -202,7 +202,7 @@ const coursesData = [
     format: "Online : Via ZOOM",
     instructor: {
       name: "Gowtham Raj",
-      title: "Python Developer & Trainer",
+      title: "Founder,Chairman,CEO",
       avatar: "GR",
     },
     date: "2025-08-28",
@@ -235,7 +235,7 @@ const coursesData = [
     format: "Online : Via ZOOM",
     instructor: {
       name: "Gowtham Raj",
-      title: "Software Engineer & C++ Expert",
+      title: "Founder,Chairman,CEO",
       avatar: "GR",
     },
     date: "2025-08-29",
@@ -268,7 +268,7 @@ const coursesData = [
     format: "Online : Via ZOOM",
     instructor: {
       name: "Gowtham Raj",
-      title: "Data Science Lead",
+      title: "Founder,Chairman,CEO",
       avatar: "GR",
     },
     date: "2025-08-30",
@@ -301,7 +301,7 @@ const coursesData = [
     format: "Online : Via ZOOM",
     instructor: {
       name: "Gowtham Raj",
-      title: "Senior Full Stack Developer",
+      title: "Founder,Chairman,CEO",
       avatar: "GR",
     },
     date: "2025-08-31",
@@ -845,11 +845,13 @@ function updateResultsCount() {
 // Format date
 function formatDate(dateString) {
   const date = new Date(dateString)
-  return date.toLocaleDateString("en-US", {
-    weekday: "short",
-    month: "short",
-    day: "numeric",
-  })
+  return date
+    .toLocaleDateString("en-US", {
+      weekday: "short",
+      day: "numeric",
+      year: "numeric",
+    })
+    .replace(/(\w+), (\d+), (\d+)/, "$1, $2, $3")
 }
 
 // Show course details in modal
