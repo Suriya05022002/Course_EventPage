@@ -455,11 +455,10 @@ body {
 }
 /* General responsive image styling for instructor photo */
 .instructor-photo img {
- width: 400px;/* Important: Maintain aspect ratio */
-  height:500px; /* Or whatever border-radius you desire */
+  width: 400px; /* Important: Maintain aspect ratio */
+  height: 500px; /* Or whatever border-radius you desire */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
-
 
 @media (max-width: 480px) {
   /* Adjust overall container padding for very small screens */
@@ -1008,7 +1007,7 @@ body {
 .instructor-info {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 10px;
   margin-bottom: 2rem;
   padding: 1.5rem;
   background: #f8f9fa;
@@ -1203,18 +1202,17 @@ body {
   padding: 2rem 0;
 }
 
+.footer-bottom-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem; /* Increased gap */
+  /* Remove display: inline; */
+  text-align: center;
+}
 
-    .footer-bottom-content {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: nowrap;
-      gap: 2rem; /* Increased gap */
-      /* Remove display: inline; */
-      text-align: center;
-    }
-    
 /* Responsive Design */
 @media (max-width: 1024px) {
   .course-grid {
@@ -1399,6 +1397,7 @@ body {
   .instructor-section {
     flex-direction: column;
     text-align: center;
+  
   }
 
   .social-links {
@@ -1417,6 +1416,23 @@ body {
 
   .contact-btn {
     justify-content: center;
+  }
+
+   .instructor-info {
+    flex-direction: column; /* stack vertically */
+    align-items: center;    /* center align */
+    text-align: center;     /* text also center */
+  }
+
+  .instructor-info h4 {
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .instructor-info p {
+    font-size: 0.9rem;
+    color: #555; /* little lighter than name */
+    margin: 0;
   }
 }
 
